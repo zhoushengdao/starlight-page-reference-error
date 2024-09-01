@@ -1,0 +1,11 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import Default from "@astrojs/starlight/components/PageTitle.astro";
+---
+
+<Default {...Astro.props}><slot /></Default>
+{
+  Astro.props.entry.data.writer && (
+    <p>Writer: {Astro.props.entry.data.writer.id}</p>
+  )
+}
